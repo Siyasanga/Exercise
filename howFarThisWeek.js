@@ -12,6 +12,7 @@ function howFarThisWeek(data){
         total = total+(size/1000.0);
     }
   }
-  console.log(total);;
+  return total;
 }
-howFarThisWeek('750m,5km,7km,950m,10km');
+const assert = require('assert');
+assert.equal(howFarThisWeek('750m,5km,7km,950m,10km')+"km",'23.7km')
